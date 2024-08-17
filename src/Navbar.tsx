@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className="bg-blue-950 py-10 text-3xl font-bold text-white">
+    <nav className="bg-blue-950 py-10 text-3xl font-bold text-white font-outfit col-start-1 col-end-3">
       <ul className="flex justify-around items-center max-w-5xl mx-auto">
         <li>
           <a className="underline" href="/">
