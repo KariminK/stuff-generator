@@ -3,28 +3,36 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 
 type props = {
   label: string;
-  name: string;
   id?: string;
   styles?: string;
   options: Array<string>;
+  onChange: (option: string) => void;
+  selected: string;
 };
-const FormSelect = ({ label, id, name, styles, options }: props) => {
+const FormSelect = ({
+  label,
+  id,
+  styles,
+  options,
+  onChange,
+  selected,
+}: props) => {
   const [active, setActive] = useState<boolean>(false);
-  const [selected, setSelected] = useState<string>("");
 
   const optionClickHandler = (option: string) => {
-    setSelected(option);
+    onChange(option);
     setActive(false);
   };
   const selectClickHandler = () => {
     setActive(!active);
   };
 
-  const optionElements = options.map((option) => {
+  const optionElements = options.map((option, index) => {
     return (
       <li
         className="p-3 bg-slate-900 rounded-lg border-b w-72 cursor-pointer hover:bg-slate-800"
         onClick={() => optionClickHandler(option)}
+        key={index}
       >
         {option}
       </li>
@@ -46,7 +54,6 @@ const FormSelect = ({ label, id, name, styles, options }: props) => {
       <ul className={"absolute top-14 " + (!active && "hidden")}>
         {optionElements}
       </ul>
-      <select className="hidden" name={name} value={selected} id={id}></select>
     </div>
   );
 };
