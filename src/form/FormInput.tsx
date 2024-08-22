@@ -18,6 +18,7 @@ const FormInput = ({
   onChange,
   value,
 }: props) => {
+  if (typeof value === "number" && Number.isNaN(value)) value = "";
   return (
     <div className={"flex flex-col " + styles}>
       <label className="font-bold mx-4 text-sm" htmlFor={id}>

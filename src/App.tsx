@@ -6,24 +6,24 @@ import OutletContext from "./types/outletContext";
 const App = () => {
   const [topic, setTopic] = useState<string>("");
   const [style, setStyle] = useState<string>("");
-  const [wordNumber, setWordNumber] = useState<number>(0);
+  const [wordNumber, setWordNumber] = useState<string>("");
   const data: data = {
     topic,
     style,
-    wordNumber,
+    wordNumber: parseInt(wordNumber),
   };
   const navigator = useNavigate();
 
   const formSubmitHandler = (e: FormEvent) => {
     e.preventDefault();
     if (topic === "") return;
-    navigator(`/confirm/${topic}/${style}/${wordNumber}`);
+    navigator(`/confirm`);
   };
   const changeTopicHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setTopic(e.target.value);
   };
   const changeWordNumber = (e: ChangeEvent<HTMLInputElement>) => {
-    setWordNumber(+e.target.value);
+    setWordNumber(e.target.value);
   };
   const changeStyleHandler = (opt: string) => setStyle(opt);
 
@@ -37,11 +37,9 @@ const App = () => {
     },
   };
   return (
-    <div className="grid grid-rows-navbar h-screen bg-slate-950 text-white">
+    <div className="grid grid-rows-navbar bg-slate-950 text-white">
       <Navbar />
-      <main className="grid grid-cols-2 relative">
-        <Outlet context={context} />
-      </main>
+      <Outlet context={context} />
     </div>
   );
 };

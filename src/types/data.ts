@@ -1,6 +1,6 @@
 type data = {
     topic: string;
     style: string;
-    wordNumber: number;
+    wordNumber: number | string;
 }
 export default data;

@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className="bg-blue-950 py-10 text-3xl font-bold text-white font-outfit">
+    <nav className="bg-blue-950 sticky top-0 z-10 py-10 text-3xl font-bold text-white font-outfit">
       <ul className="flex justify-around items-center max-w-5xl mx-auto">
         <li>
           <a className="underline" href="/">
@@ -14,7 +14,10 @@ const Navbar = () => {
           </p>
         </li>
         <li>
-          <a className="underline" href="/about">
+          <a
+            className="underline"
+            href="https://youtu.be/dQw4w9WgXcQ?si=8GxU_ddjg-fhIrVw"
+          >
             About
           </a>
         </li>

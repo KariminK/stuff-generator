@@ -11,7 +11,7 @@ const Home = () => {
   const { data, handlers }: OutletContext = useOutletContext();
 
   return (
-    <>
+    <main className="grid grid-cols-2 relative">
       <Container styles=" font-outfit">
         <div>
           <h1 className="text-5xl font-extrabold mt-20">Enter your idea</h1>
@@ -55,7 +55,7 @@ const Home = () => {
       <Container styles="bg-slate-900 row-span-2">
         <span className="text-[140px]">...</span>
       </Container>
-    </>
+    </main>
   );
 };
 
