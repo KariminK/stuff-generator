@@ -21,11 +21,11 @@ const FormInput = ({
   if (typeof value === "number" && Number.isNaN(value)) value = "";
   return (
     <div className={"flex flex-col " + styles}>
-      <label className="font-bold mx-4 text-sm" htmlFor={id}>
+      <label className="font-bold mx-4 text-sm lg:text-xl" htmlFor={id}>
         {label}
       </label>
       <input
-        className="bg-transparent border-2 rounded-xl outline-none px-5 py-1 w-72 text-lg"
+        className="bg-transparent border-2 border-white rounded-xl outline-none px-5 py-1 w-72 text-lg lg:text-xl"
         type={type}
         name={name}
         id={id}

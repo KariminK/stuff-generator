@@ -11,10 +11,12 @@ const Home = () => {
   const { data, handlers }: OutletContext = useOutletContext();
 
   return (
-    <main className="grid grid-cols-2 relative">
+    <main className="grid grid-cols-2 lg:grid-cols-1 lg:grid-rows-2 relative">
       <Container styles=" font-outfit">
         <div>
-          <h1 className="text-5xl font-extrabold mt-20">Enter your idea</h1>
+          <h1 className="text-5xl lg:text-6xl font-extrabold mt-20 lg:mt-5">
+            Enter your idea
+          </h1>
           <form onSubmit={(e) => handlers.formSubmitHandler(e)}>
             <FormInput
               label="Topic"

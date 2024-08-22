@@ -30,7 +30,7 @@ const FormSelect = ({
   const optionElements = options.map((option, index) => {
     return (
       <li
-        className="p-3 bg-slate-900 rounded-lg border-b w-72 cursor-pointer hover:bg-slate-800"
+        className="p-3 bg-slate-900 rounded-lg border-b w-72 lg:text-xl cursor-pointer hover:bg-slate-800"
         onClick={() => optionClickHandler(option)}
         key={index}
       >
@@ -41,17 +41,17 @@ const FormSelect = ({
 
   return (
     <div className={"flex flex-col relative " + styles}>
-      <label className="font-bold mx-4 text-sm" htmlFor={id}>
+      <label className="font-bold mx-4 text-sm lg:text-xl" htmlFor={id}>
         {label}
       </label>
       <div
         onClick={selectClickHandler}
-        className="w-72 h-9 cursor-pointer bg-transparent border-2 rounded-xl px-5 py-1 flex items-center justify-between"
+        className="w-72 h-9 cursor-pointer bg-transparent border-2 rounded-xl px-5 py-1 flex items-center justify-between lg:text-xl"
       >
         <span>{selected}</span>
         {active ? <FaAngleUp /> : <FaAngleDown />}
       </div>
-      <ul className={"absolute top-14 " + (!active && "hidden")}>
+      <ul className={"absolute top-14 lg:top-16 z-10 " + (!active && "hidden")}>
         {optionElements}
       </ul>
     </div>

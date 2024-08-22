@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 
 html::-webkit-scrollbar-track {
@@ -14,5 +14,4 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background: #172554;
-  border-radius: 100%;
 }
