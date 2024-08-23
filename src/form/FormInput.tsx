@@ -25,7 +25,7 @@ const FormInput = ({
         {label}
       </label>
       <input
-        className="bg-transparent border-2 border-white rounded-xl outline-none px-5 py-1 w-72 text-lg lg:text-xl"
+        className="bg-transparent border-2 border-white rounded-xl outline-none px-5 py-1 w-72 text-lg sm:text-md sm:w-64"
         type={type}
         name={name}
         id={id}
