@@ -45,7 +45,7 @@ const Confirm = () => {
           </div>
         </Container>
       </main>
-      <Outlet />
+      <Outlet context={{ data }} />
     </>
   );
 };
